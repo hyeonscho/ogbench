@@ -327,18 +327,18 @@ def make_maze_env(loco_env_type, maze_env_type, *args, **kwargs):
                 raise ValueError(f'Unknown maze type: {self._maze_type}')
 
             # More diverse task generation based on the maze map
-            visitable_positions = []
-            for i in range(self.maze_map.shape[0]):
-                for j in range(self.maze_map.shape[1]):
-                    if self.maze_map[i, j] == 0:
-                        visitable_positions.append((i, j))
-            # Combinations
-            tasks = []
-            for i in range(len(visitable_positions)):
-                for j in range(i + 1, len(visitable_positions)):
-                    tasks.append([visitable_positions[i], visitable_positions[j]])
-                    tasks.append([visitable_positions[j], visitable_positions[i]])
-            print(f"The number of tasks is {len(tasks)}. The Task ID should be in [1, {len(tasks)}].")
+            # visitable_positions = []
+            # for i in range(self.maze_map.shape[0]):
+            #     for j in range(self.maze_map.shape[1]):
+            #         if self.maze_map[i, j] == 0:
+            #             visitable_positions.append((i, j))
+            # # Combinations
+            # tasks = []
+            # for i in range(len(visitable_positions)):
+            #     for j in range(i + 1, len(visitable_positions)):
+            #         tasks.append([visitable_positions[i], visitable_positions[j]])
+            #         tasks.append([visitable_positions[j], visitable_positions[i]])
+            # print(f"The number of tasks is {len(tasks)}. The Task ID should be in [1, {len(tasks)}].")
 
             self.task_infos = []
             for i, task in enumerate(tasks):

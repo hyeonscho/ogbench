@@ -28,7 +28,9 @@
         <geom name="floor" pos="0 0 0" size="100 100 .2" type="plane" conaffinity="1" condim="3" material="grid"/>
         <body name="torso" pos="0 0 0">
             <!-- <camera name="back" pos="0 -2.5 5" xyaxes="1 0 0 0 2 1" mode="trackcom"/> Default -->
-            <camera name="back" pos="0 -4 6" xyaxes="1 0 0 0 1.5 1" mode="trackcom"/> 
+            <!-- <camera name="back" pos="0 -4 6" xyaxes="1 0 0 0 1.5 1" mode="trackcom"/>  on MCTD-->
+            <camera name="back" pos="0 0 15" xyaxes="1 0 0 0 1 0" mode="fixed"/>
+            <camera name="maze-view" pos="0 0 100" xyaxes="1 0 0 0 1 0" mode="fixed"/>
             <geom name="pointbody" type="sphere" size="0.7" pos="0 0 0.7"/>
             <joint name="ballx" type="slide" axis="1 0 0" pos="0 0 0"/>
             <joint name="bally" type="slide" axis="0 1 0" pos="0 0 0"/>

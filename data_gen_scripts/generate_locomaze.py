@@ -3,7 +3,15 @@ import os
 sys.path.insert(0, "/home/hyeons/workspace/ogbench") # Path to local ogbench
 sys.path.append("../impls") 
 os.environ["MUJOCO_GL"] = "egl"
+# python generate_locomaze.py --env_name=visual-pointmaze-medium-v0 --save_path=data/visual-pointmaze-stitch-navigate-v0.npz --dataset_type=stitch --num_episodes=5000 --max_episode_steps=201 --noise=0.5
+# python generate_locomaze.py --env_name=visual-pointmaze-giant-v0 --save_path=data/visual-pointmaze-giant-stitch-v0.npz --dataset_type=stitch --num_episodes=5000 --max_episode_steps=201 --noise=0.5
 # python generate_locomaze.py --env_name=visual-pointmaze-medium-v0 --save_path=data/visual-pointmaze-medium-navigate-v0.npz --dataset_type=navigate --num_episodes=1000 --max_episode_steps=1001 --noise=0.5
+# python generate_locomaze.py --env_name=visual-pointmaze-large-v0 --save_path=data/visual-pointmaze-medium-large-v0.npz --dataset_type=navigate --num_episodes=1000 --max_episode_steps=1001 --noise=0.5
+# python generate_locomaze.py --env_name=visual-pointmaze-giant-v0 --save_path=data/visual-pointmaze-giant-large-v0.npz --dataset_type=navigate --num_episodes=500 --max_episode_steps=2001 --noise=0.5
+
+
+# for test
+# python generate_locomaze.py --env_name=visual-pointmaze-giant-v0 --save_path=./data/0331.npz --dataset_type=navigate --num_episodes=1 --max_episode_steps=2001 --noise=0.5
 import glob
 import json
 from collections import defaultdict

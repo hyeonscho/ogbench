@@ -453,5 +453,5 @@ class ManipSpaceEnv(CustomMuJoCoEnv):
     ):
         if camera is None:
             camera = 'front' if self._ob_type == 'states' else 'front_pixels'
-
+            
         return super().render(camera=camera, *args, **kwargs)
